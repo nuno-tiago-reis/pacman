@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\constants.h" />
+    <ClInclude Include="source\models\glm.h" />
+    <ClInclude Include="source\models\stdafx.h" />
+    <ClInclude Include="source\models\texture.h" />
+    <ClInclude Include="source\objects\camera.h" />
+    <ClInclude Include="source\objects\explosion.h" />
+    <ClInclude Include="source\objects\ghost.h" />
+    <ClInclude Include="source\objects\graph.h" />
+    <ClInclude Include="source\objects\hud.h" />
+    <ClInclude Include="source\objects\light.h" />
+    <ClInclude Include="source\objects\manager.h" />
+    <ClInclude Include="source\objects\map.h" />
+    <ClInclude Include="source\objects\node.h" />
+    <ClInclude Include="source\objects\object.h" />
+    <ClInclude Include="source\objects\pacman.h" />
+    <ClInclude Include="source\objects\quadric.h" />
+    <ClInclude Include="source\soil\image_dxt.h" />
+    <ClInclude Include="source\soil\image_helper.h" />
+    <ClInclude Include="source\soil\soil.h" />
+    <ClInclude Include="source\soil\stbi_dds_aug.h" />
+    <ClInclude Include="source\soil\stbi_dds_aug_c.h" />
+    <ClInclude Include="source\soil\stb_image_aug.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\main.cpp" />
+    <ClCompile Include="source\models\glm.cpp" />
+    <ClCompile Include="source\models\glmimg.cpp" />
+    <ClCompile Include="source\models\stdafx.cpp" />
+    <ClCompile Include="source\models\texture.cpp" />
+    <ClCompile Include="source\objects\camera.cpp" />
+    <ClCompile Include="source\objects\explosion.cpp" />
+    <ClCompile Include="source\objects\ghost.cpp" />
+    <ClCompile Include="source\objects\graph.cpp" />
+    <ClCompile Include="source\objects\hud.cpp" />
+    <ClCompile Include="source\objects\light.cpp" />
+    <ClCompile Include="source\objects\manager.cpp" />
+    <ClCompile Include="source\objects\map.cpp" />
+    <ClCompile Include="source\objects\node.cpp" />
+    <ClCompile Include="source\objects\object.cpp" />
+    <ClCompile Include="source\objects\pacman.cpp" />
+    <ClCompile Include="source\objects\quadric.cpp" />
+    <ClCompile Include="source\soil\image_dxt.c" />
+    <ClCompile Include="source\soil\image_helper.c" />
+    <ClCompile Include="source\soil\soil.c" />
+    <ClCompile Include="source\soil\stb_image_aug.c" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1D0DC337-E22D-4D39-B2AE-D7A1DCB1EC6F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>CG_Labs</RootNamespace>
+    <ProjectName>Pacman</ProjectName>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <LibraryPath>$(ProjectDir)libraries\fmodex\lib;$(ProjectDir)libraries\freeglut\lib;$(ProjectDir)libraries\glew\lib;$(ProjectDir)libraries\soil\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)libraries\fmodex\include;$(ProjectDir)libraries\freeglut\include;$(ProjectDir)libraries\glew\include;$(ProjectDir)libraries\soil\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(ProjectDir)\libraries\fmodex\include;$(ProjectDir)\libraries\freeglut\include;$(ProjectDir)\libraries\glew\include;$(ProjectDir)\libraries\soil\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)\libraries\fmodex\lib;$(ProjectDir)\libraries\freeglut\lib;$(ProjectDir)\libraries\glew\lib;$(ProjectDir)\libraries\soil\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_DEBUG;GLUT_BUILDING_LIB;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glew32.lib;glew32s.lib;freeglut.lib;fmodex.lib;soil.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OptimizeReferences>false</OptimizeReferences>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+      <AdditionalLibraryDirectories>$(SolutionDir)Libraries;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>glew32.lib;freeglut.lib;fmodex.lib;soil.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)libraries\fmodex\lib;$(ProjectDir)libraries\freeglut\lib;$(ProjectDir)libraries\glew\lib;$(ProjectDir)libraries\soil\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

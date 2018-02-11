@@ -1,0 +1,10 @@
+/.vs
+/Debug
+/Release
+/Pacman.VC.db
+
+/Pacman/.vs
+/Pacman/Debug
+/Pacman/Release
+/Pacman/Pacman.VC.db
+
